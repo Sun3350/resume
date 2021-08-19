@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="image/fav icon.png"/>
+    <!--using fontawesome-------->
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js"  crossorigin="anonymous"></script>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+
+}
+body{
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    width: 100%;
+   margin: 50px;
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   box-shadow: 0  35px 55px rgb(0,0,0,0.1);
+    max-width:  1000px; 
+    min-height: 1000px;
+    background: #fff;
+}
+
+.container .left-side{
+    position: relative;
+    background: #003147;
+    padding: 40px;
+}
+.profile-text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px rgba(225,225,225,0.2);
+}
+.profile-text .imgBox{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile-text .imgBox img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profile-text h2{
+    color: #fff;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-align:center;
+    margin-top: 20px;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profile-text h3 span{
+font-size: 0.8em;
+font-weight: 300;
+}
+.contact-info{
+    padding-top: 40px;
+
+}
+.tittle{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.contact-info ul{
+    position: relative;
+
+}
+.contact-info ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+
+}
+.contact-info ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+.contact-info ul li span{
+    font-size:13px;
+    color: #fff;
+    font-weight: 300;
+}
+.contact-info.education li{
+  margin-bottom: 15px;
+}
+.contact-info.education h5{
+   color: #03a9f4;
+   font-weight: 600;
+}
+.contact-info.education h4:nth-child(2){
+    color: #fff;
+    font-weight: 500;
+}
+.contact-info.education h4{
+    color: #fff;
+    font-weight: 500;
+}
+.contact-info.lang .percentage{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+}
+.contact-info.lang .percentage div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+.container .right-side{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+.about{
+    margin-bottom: 50px;
+
+}
+.about:last-child{
+    margin-bottom: 0;
+}
+.title2{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p{
+    color: #333;
+}
+.about .box{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+.about .box .year-company{
+    min-width: 150px;
+}
+.about .box .year-company h5{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+.about  .box .text h4{
+    text-transform: uppercase;
+    color: #2a7da2;
+   font-size: 16px;
+}
+.Skills .box{
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.Skills .box h4{
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+}
+.Skills .box .percent{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+.Skills .box .percent div{
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+background: #03a9f4;
+}
+.interest ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.interest ul li{
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.interest ul li .fa{
+    color: #03a9f4;
+    font-size: 18px;
+    width: 20px;
+}
+@media (max-width: 1000px){
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .interest ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media (max-width:  400px){
+    .about .Box{
+        flex-direction: column;
+    }
+    .about .Box .year-company{
+        margin-bottom: 5px;
+    }
+    .interest ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .Skills .Box{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+</style>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div class="profile-text">
+                <div class="imgBox">
+                    <img src="IMG_20200827_151608_2.jpg" alt="">
+                </div>
+                <h2>Ayomide Isaac <span>web-developer</span></h2>
+            </div>
+            <div class="contact-info">
+                <h3 class="tittle">contact Info</h3>
+                <ul>
+                    <li>
+                        <span class="icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </span>
+                        <span class="text">ayomide.olusanya@yahoo.com</span>
+                    </li>
+                    <li>
+                        <span class="icon">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </span>
+                        <span class="text">+2348133504366</span>
+                    </li>
+                    <li>
+                        <span class="icon">
+                            <i class="fab fa-twitter-square"></i>
+                        </span>
+                        <span class="text">@Sundecoder</span>
+                    </li>
+                    <li>
+                        <span class="icon">
+                            <i class="fab fa-google-plus-g"></i>
+                        </span>
+                        <span class="text">isaacayomide2358@gmail.com</span>
+                    </li>
+                    <li>
+                        <span class="icon">
+                 
+        <i class="fab fa-instagram"></i>
+       
+                        </span>
+                        <span class="text">Sunisaac2</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-info education">
+                <h3 class="tittle">education</h3>
+                <ul>
+                    <li>
+                       <h5>2010-2013</h5>
+                       <h4>Master Degree in computer science</h4>
+                       <h4>university name</h4>
+                    </li>
+                    <li>
+                       <h5>2007-2010</h5>
+                       <h4>Bachelor Degree in computer science</h4>
+                       <h4>university name</h4>
+                    </li>
+                    <li>
+                       <h5>1997-2007</h5>
+                       <h4>Matriculation</h4>
+                       <h4>university name</h4>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-info lang">
+                <h3 class="tittle">language</h3>
+                <ul>
+                    <li>
+                    <span class="text">English</span>
+                    <span class="percentage">
+                        <div style="width: 90%;"></div>
+                    </span>
+                    </li>
+                    <li>
+                    <span class="text">spanish</span>
+                    <span class="percentage"><div style="width: 90%;"></div></span>
+                    </li>
+                    <li>
+                    <span class="text">french</span>
+                    <span class="percentage"><div style="width: 90%;"></div></span>
+                    </li>
+                    </ul>
+                    </div>
+        </div>
+        <div class="right-side">
+            <div class="about">
+                <h2 class="title2">Profile</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus tempore eius exped Lorem ipsum 
+                    sit amet consectetur adipisicing elit. Tenetur aspernatur accusantium nisi sit officia ve
+                     debitis officiis facilis pariatur autem nihil perspiciatis praesentium eum? Quibusdam 
+                     optio recusandae. <br><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit obcaecati similique, 
+                     eaque laudantium nemo mollitia quis ducimus,Lorem ipsum dolor sit amet consectetur adipisi
+                      laborum rem quod tempora. Quasi iusto sapiente veritatis, dicta ducimus nesciunt itaque corrupti!
+                </p>
+            </div>
+            <div class="about">
+                <h2 class="title2">Experience</h2>
+                <div class="box">
+                    <div class="year-company">
+                        <h5>2021-present</h5>
+                        <h5 style="text-transform: lowercase;">ZuriInternship/HNG18</h5>
+                    </div>
+                    <div class="text">
+                        <h4>senior front-end web-developer</h4>
+                 <a href="https://intership.zuri.team" >https://intership.zuri.team</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="year-company">
+                        <h5>2021-present</h5>
+                        <h5>company name</h5>
+                    </div>
+                    <div class="text">
+                        <h4>senior front-end web-developer</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, consectetur accusantium! Ipsum quae</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="year-company">
+                        <h5>2021-present</h5>
+                        <h5>company name</h5>
+                    </div>
+                    <div class="text">
+                        <h4>senior front-end web-developer</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, consectetur accusantium! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi quos temporibus quasi aut adipisc Ipsum quae</p>
+                    </div>
+                </div>
+                </div>
+                <div class="about Skills">
+                    <h2 class="title2">Professional Skills</h2>
+                           <div class="box">
+                               <h4>Html</h4>
+                               <div class="percent">
+                                   <div style="width: 95%;"></div>
+                               </div>
+                           </div>
+                           <div class="box">
+                               <h4>Css</h4>
+                               <div class="percent"><div style="width: 90%;"></div></div>
+                           </div>
+                           <div class="box">
+                               <h4>Javascript</h4>
+                               <div class="percent"><div style="width: 95%;"></div></div>
+                           </div>
+                           <div class="box">
+                               <h4>reactjs</h4>
+                               <div class="percent"><div style="width: 75%;"></div></div>
+                           </div>
+                           <div class="box">
+                               <h4>vuejs</h4>
+                               <div class="percent"><div style="width: 65%;"></div>
+                            </div>
+                           </div>
+                           <div class="box">
+                               <h4>nuxtjs</h4>
+                               <div class="percent"><div style="width: 55%;"></div>
+                            </div>
+                           </div>
+                </div>
+                <div class="about interest">
+                    <h2 class="title2">interest</h2>
+                    <ul>
+                        <li>gaming</li>
+                        <li>singing</li>
+                        <li>reading</li>
+                        <li>cooking</li>
+                    </ul>
+                    </div>
+                    <div class="down">
+                        <div class="logo">
+                            <h1><img src="logo.36d2d48a.svg" >/HNGi8x14G</h1>
+                            
+                        </div>
+                        
+                    </div>
+        </div>
+    </div>
+</body>
+</html>
